@@ -1,0 +1,36 @@
+{
+  "name": "cl-shopping-list-backend",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/index.ts",
+    "test": "jest",
+    "pre:build": "rm -rf ./dist",
+    "build": "npm run pre:build && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:felipe-b-oliveira/CL-shopping-list-backend.git"
+  },
+  "keywords": [],
+  "author": "Felipe Oliveira <felipe.boliveira@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/felipe-b-oliveira/CL-shopping-list-backend/issues"
+  },
+  "homepage": "https://github.com/PseudoCoders/livro-nas-pracas-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.2",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.1.3"
+  }
+}
