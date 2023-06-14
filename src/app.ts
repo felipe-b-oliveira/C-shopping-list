@@ -1,7 +1,9 @@
+import 'dotenv/config';
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import productsRoute from './routes/product.route';
+require('dotenv').config();
 
 const app = express();
 app.use(cors());
