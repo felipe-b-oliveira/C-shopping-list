@@ -1,2 +1,16 @@
-dist
-node_modules
+  
+# Dependencies
+node_modules/
+
+# Sqlite
+**/*.sqlite
+
+# Credentials
+*.env
+*.env.test
+
+# Webstorm/text editor meta
+.vscode
+
+# Distribution
+dist/
