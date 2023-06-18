@@ -33,7 +33,7 @@ export default {
                         'Authorization': `Bearer ${apiKey}`,
                     },
                 });
-                // console.log('------> response:', response);
+                console.log('------> response:', response.data.choices[0].text);
 
                 // Extrai a resposta da API
                 const generatedText = response.data.choices[0].text;
