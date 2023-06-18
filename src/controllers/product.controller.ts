@@ -3,21 +3,21 @@ import ProductService from '../service/product.service';
 import { Product } from '../typings/product.typings';
 import axios from 'axios';
 
-const products: Array<string> = ['Arroz', 'Sabonete', 'Frango', 'Leite'];
+const products: Array<string> = ['Rice', 'Soap', 'Shampoo', 'Milk'];
 
 export default {
     async createSortedList(req: Request, res: Response): Promise<Response> {
         try {
             const apiKey = process.env.OPENAI_API_KEY;
-            const endpoint = 'https://api.openai.com/v1/engines/davinci/completions';
+            const endpoint = 'https://api.openai.com/v1/engines/text-davinci-003/completions';
 
             // const unsortedProducts = req.body;
             // console.log('------> unsortedProducts:', unsortedProducts);
             const unsortedProducts = products;
             console.log('------> unsortedProducts:', unsortedProducts);
 
-            const prompt = `Given a list of products: ${products.join(', ')}, sort them by sections (e.g., groceries, hygiene, meats).`;
-            // console.log('------> prompt:', prompt);
+            const prompt = `Given a list of products: ${products.join(', ')}, categorize them by sections.`;
+            console.log('------> prompt:', prompt);
 
             // TODO: Transform into a Middleware
             // Process list (send and receive for OpenAI)
