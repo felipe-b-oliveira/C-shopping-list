@@ -9,7 +9,8 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+app.use('/test', productsRoute);
 app.use('/products', productsRoute);
-app.get('/', (req, res) => res.status(404));
+app.get('/', (req, res) => res.status(404).send('Path not found'));
 
 export { app };
