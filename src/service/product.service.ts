@@ -1,7 +1,7 @@
-import { Product } from '../typings/product.typings';
+import { ProductList } from "../typings/product.typings";
 
 export default {
-    async createClusteredList(product: Product): Promise<Product | never> {
-        return
-    },
-}
+  async createClusteredList(product: ProductList): Promise<ProductList | never> {
+    return [{ _id: "001", name: "rice" }];
+  },
+};
